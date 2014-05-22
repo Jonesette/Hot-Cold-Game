@@ -12,7 +12,13 @@ $(document).ready(function(){
   	});
 
 /*Computer Selects Number 1-100*/
-var answer = Math.floor((Math.random() * 100) +1);
+
+
+var randomizer = function() {
+  return Math.floor((Math.random() * 100) +1);
+};
+
+var answer = randomizer();
 //console.log (answer);
 
 /*Create User Guess Variable*/
@@ -22,7 +28,7 @@ var Compare;
   var numGuesses = 0;
 
   var newGame = function() {
-    answer = Math.floor((Math.random() * 100) +1);
+    answer = randomizer();
     //console.log (answer);
     $('form').show();
     $('#guessCount').show(); 
